@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EleveneveLe Худи</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/itc-slider.css">
+    <link rel="stylesheet" href="css/accordion.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <h4 class="logo">EleveneveLe</h4>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link">Главная</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Худи</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Футболки</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link">Шорты</a></li>
+                </ul>
+
+                <div class="burger" onclick="burgerClick()">
+                    <div class="burger__line burger__line_1"></div>
+                    <div class="burger__line burger__line_2"></div>
+                    <div class="burger__line burger__line_3"></div>
+                </div>
+            </nav>
+            <button class="btn_menu" id="btn-menu">Меню</button>
+
+            <div id="menu" class="header__menu">
+                <ul class="menu__list">
+                    <li class="menu__item"><a href="#">Вход</a></li>
+                    <li class="menu__item"><a href="#">Корзина</a></li>
+                    <li class="menu__item"><a href="#">Акции</a></li>
+                    <li class="menu__item"><a href="#">Реклама</a></li>
+                    <li class="menu__item">
+                        <div class="theme">
+                            <h4 class="theme__title">Тема</h4>
+                            <ul class="theme__list">
+                                <li class="theme__item">
+                                    <div class="theme__light" onclick="choiceLight()"></div>
+                                </li>
+                                <li class="theme__item">
+                                    <div class="theme__dark" onclick="choiceDark()"></div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="shop">
+            <div class="container">
+                <h1 class="shop__title">EleveneveLe Худи</h1>
+                <div class="itc-slider" data-slider="itc-slider" data-autoplay="true" data-interval="7000"
+                    data-swipe="true">
+                    <div class="itc-slider-wrapper">
+                        <div class="itc-slider-items">
+                            <div class="itc-slider-item">
+                                <img src="img/Hudi.png" alt="картинка с EleveneveLe Худи" class="shop__img">
+                            </div>
+                            <div class="itc-slider-item">
+                                <img src="img/Hudi2.png" alt="картинка с EleveneveLe Худи" class="shop__img">
+                            </div>
+                            <div class="itc-slider-item">
+                                <img src="img/Hudi3.png" alt="картинка с EleveneveLe Худи" class="shop__img">
+                            </div>
+                            <div class="itc-slider-item">
+                                <img src="img/Hudi4.png" alt="картинка с EleveneveLe Худи" class="shop__img">
+                            </div>
+                        </div>
+                    </div>
+                    <button class="itc-slider-btn itc-slider-btn-prev"></button>
+                    <button class="itc-slider-btn itc-slider-btn-next"></button>
+                </div>
+
+                <div class="accordion" id="accordion-1">
+                    <div class="accordion__item">
+                        <h2 class="accordion__header">Описание</h2>
+                        <div class="accordion__body">
+                            <p class="shop__text"> Худи- не отъемлемая часть гардероба каждого человека в наше
+                                время!Теплое, мягкое, удобное худи из футера с начесом , согреет каждую красавицу даже в
+                                самые сильные морозы!Наши изделия сшиты из качественных натуральных материалов , с
+                                заботой и любовью к покупателям! Худи имеют правильную, максимально комфортную посадку,
+                                чтобы не сковывать движение! Удобный карман кенгуру, плюс потайной карман на молнии
+                                дополняют удобство! В него можно положить любую мелочь, ключ или телефон, и быть
+                                уверенной , что ничего не выпадет, и не потеряется во время активной подвижности!
+                                Манжета с прорезью на рукавах будет нежно оберегать ваши ручки от обморожения, даже без
+                                перчаток! Капюшен скроен так, чтобы не сползал при движении ,но и не закрывал лицо.
+                                Состав ткани делает изделие гипоаллергенным, но износостойким. Что дает возможность
+                                носить изделие не один сезон при правильном уходе(стирка, глажение) Дополните худи
+                                нашими штанами с высокой посадкой, в цвет ,или можно поиграть на контрасте , и вы
+                                получите прекрасный комплект Желаем Вам приятного использования! С любовью Ваш
+                                EleveneveLe! </p>
+                        </div>
+                    </div>
+                    <div class="accordion__item">
+                        <h2 class="accordion__header">Цена</h2>
+                        <div class="accordion__body">
+                            <p class="shop__price">4 999 ₽ </p>
+                            <button class="shop__btn" id="btn" onclick="buy()">Купить</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="clock">
+            <div class="container container_clock">
+                <div id="time"></div>
+            </div>
+        </section>
+
+        <section class="video">
+            <video id="myVideo" autoplay muted loop>
+                <source src="video/video1.mp4" type="video/mp4">
+            </video>
+            <div class="video__content">
+                <div class="container">
+                    <h1 class="video__title">Заголовок</h1>
+                    <p class="video__text">Текст</p>
+                    <button class="video__btn" id="play" onclick="play()">pause</button>
+                    <button class="video__btn" id="mute" onclick="mute()">off</button>
+                    <button class="video__btn" onclick="next()">Next</button>
+                    <button class="video__btn" onclick="prev()">Prev</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container container_footer">
+            <p class="footer__text">&copy; EleveneveLe 2024 г.</p>
+        </div>
+    </footer>
+
+    <script src="js/button.js"></script>
+    <script src="js/itc-slider.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/accordion.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/video-player.js"></script>
+</body>
+
+</html>
